@@ -9,8 +9,8 @@ import { LoginFormComponent } from './login-form/login-form.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'proyecto-angular';
-  mensaje = 'Hola Alvaro';
+  title = 'Alvaro';
+  mensaje = 'Formulario de login';
   list = [
     { id: 0, nombre: 'fruta'},
     { id: 1, nombre: 'carne'},

@@ -1,13 +1,10 @@
-<h1>{{message()}}</h1>
-<p>login-form works!</p>
-<ul>
-  @for (listItem of list(); track listItem.id){
-    <li>{{ listItem.nombre }}</li>
-  } @empty {
-    <li>No hay resultados</li>
-  }
-
-  <li *ngFor="let listItem of list()">{{ listItem.nombre }}</li>
-</ul>
-
-<button (click)="onButtonClick()">HOLA</button>
+<h1>Login</h1>
+<form id="loginForm" [formGroup]="loginForm" (ngSubmit)="onFormSubmit()">
+  <label>Usuario: <input type="text" id="email" placeholder="email"
+    formControlName="email"
+    [ngClass]="{ 'error': this.loginForm.value.email === '' }" /></label>
+  <label>Contraseña: <input type="password" id="password" placeholder="contraseña"
+    formControlName="password"
+    [ngClass]="{ 'error': this.loginForm.value.password === '' }" /></label>
+  <button type="submit" id="loginButton" title="Login" [disabled]="!loginForm.valid">Login</button>
+</form>

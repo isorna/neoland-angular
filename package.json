@@ -1,7 +1,9 @@
 {
   "name": "proyecto-angular",
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
+    "db:start": "node --env-file=.env --watch server/server.express.js",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -10,6 +12,7 @@
   },
   "private": true,
   "dependencies": {
+    "express": "^4.21.2",
     "@angular/animations": "^19.1.0",
     "@angular/common": "^19.1.0",
     "@angular/compiler": "^19.1.0",
@@ -23,6 +26,9 @@
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
+    "cors": "^2.8.5",
+    "mongodb": "6.13",
+    "@types/express": "^5.0.0",
     "@angular-devkit/build-angular": "^19.1.8",
     "@angular/cli": "^19.1.8",
     "@angular/compiler-cli": "^19.1.0",
