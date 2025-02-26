@@ -10,4 +10,11 @@ import { LoginFormComponent } from './login-form/login-form.component';
 })
 export class AppComponent {
   title = 'proyecto-angular';
+  mensaje = 'Hola Alvaro';
+  list = [
+    { id: 0, nombre: 'fruta'},
+    { id: 1, nombre: 'carne'},
+    { id: 2, nombre: 'leche'},
+    { id: 3, nombre: 'pescado'}
+  ];
 }

@@ -1,1 +1,13 @@
+<h1>{{message()}}</h1>
 <p>login-form works!</p>
+<ul>
+  @for (listItem of list(); track listItem.id){
+    <li>{{ listItem.nombre }}</li>
+  } @empty {
+    <li>No hay resultados</li>
+  }
+
+  <li *ngFor="let listItem of list()">{{ listItem.nombre }}</li>
+</ul>
+
+<button (click)="onButtonClick()">HOLA</button>
